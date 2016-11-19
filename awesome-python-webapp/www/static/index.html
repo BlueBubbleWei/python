@@ -1,0 +1,212 @@
+<!doctype html><!--
+	声明文档类型：html(符合w3c万维网组织联盟统一标准规范)
+	为什么声明？不声明有什么影响
+	每个浏览器对html css js都有自己的编译模式（兼容模式）
+	兼容模式：浏览器所特有的编译模式
+-->
+<html><!--根目录节点标签-->
+	<head><!--头部 规定一些信息(提供给浏览器识别 用户看不到)-->
+		<meta charset="UTF-8"><!--字符编码：utf-8 国际编码-->
+		<meta name="Generator" content="EditPlus®"><!--用什么来生成的-->
+		<meta name="Author" content="作者">
+		<meta name="Keywords" content="关键词：提供给搜索引擎">
+		<meta name="Description" content="描述：对网页内容的大概介绍">
+		<title>手机音乐播放器</title><!--网页文档的标题-->
+		<style>/* css样式的存放位置 */
+			/*
+				第一步:找到对应的标签元素
+				第二步:设置相应的属性
+			*/
+			*{/* 通用选择器 : 选择到所有的标签元素*/
+				margin:0;/*外边距*/
+				padding:0;/*内边距*/
+				/*
+					单独设置
+					margin-top:上外边距
+					margin-bottom:下外边距
+					margin-right:右外边距
+					margin-left:左外边距
+					
+					统一设置
+					margin:10px;上下左右 10px
+					margin:10px 20px;上下为10px 左右20px
+					margin:10px 20px 30px;上10 左右20 下30
+					margin:10px 20px 30px 40px;顺时针方向 上右下左
+				*/
+			}
+			body{
+				background:url("https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin/438.jpg")center 0;background-size:100%;/*背景*/
+				/*background:url("static/images/dh_bg1.jpg");*/
+				/*性能优化:一个优秀的开发工程师一定是为服务器、CPU考虑(提高代码的加载效率网站打开的速度)*/
+				font-size:12px;
+				font-family:"微软雅黑";
+				color:#666;
+			}
+			#music{/* # id选择器*/
+				position:relative;/*相对定位:参考物*/
+				width:322px;/*宽度*/
+				height:635px;/*高度*/
+				/*background:red;背景颜色*/
+				
+				margin:50px auto;/*上下50px 左右自动(居中)*/
+			}
+			.m_top{/* . class选择器 */
+				width:100%;
+				height:42px;
+				background:url("static/images/phone_top.png");/* 背景图片 */
+			}
+			.m_info{
+				width:100%;
+				height:20px;
+				background:url("static/images/top.jpg");
+			}
+			.m_title{
+				width:320px;
+				height:40px;
+				color:#fff;/*文字颜色*/
+				font-size:15px;/*文字的尺寸*/
+				text-align:center;/*文字居中*/
+				background:#000;
+				line-height:40px;/*行高*/
+				border:1px solid #fff;/*边框线:宽度 类型(实线) 颜色*/
+				border-top:0;/* 0/none 都是没有  IE只识别0*/
+				border-bottom:0;
+			}
+			.m_song{
+				width:320px;
+				height:490px;
+				background:url("static/images/psb.jpg") no-repeat;
+				background-position:center;
+				background-size:cover;/*等比例放大覆盖盒子*/
+				border:1px solid #fff;/*边框线:宽度 类型(实线) 颜色*/
+				border-top:0;/* 0/none 都是没有  IE只识别0*/
+				border-bottom:0;
+			}
+			.m_song p{
+				color:#fff;
+				padding-left:20px;/*距离左边*/
+				line-height:20px;
+			}
+			.m_footer{
+				width:100%;
+				height:47px;
+				background:url("static/images/phone_bottom.png");
+			}
+			.btn{
+				position:absolute;/*绝对定位*/
+				left:136px;/*距离参考物左端的距离*/
+				bottom:100px;/*距离参考物下端距离*/
+				width:50px;
+				height:50px;
+				background:url("static/images/play.png");
+				background-size:cover;
+			}
+			::-webkit-scrollbar{width:5px;height:6px;background:#ccc;}
+			::-webkit-scrollbar-button{background-color:#e5e5e5;}
+			::-webkit-scrollbar-track{background:#999;}
+			::-webkit-scrollbar-track-piece{background:#ccc}
+			::-webkit-scrollbar-thumb{background:#666;}
+			::-webkit-scrollbar-corner{background:#82AFFF;}
+			::-webkit-scrollbar-resizer{background:#FF0BEE;}
+			scrollbar{-moz-appearance:none !important;background:rgb(0,255,0) !important;}
+			scrollbarbutton{-moz-appearance:none !important;background-color:rgb(0,0,255) !important;}
+			scrollbarbutton:hover{-moz-appearance:none !important;background-color:rgb(255,0,0) !important;}
+		</style>
+	</head>
+	<body><!--身体-->
+		<!--盒子模型标签:div 宽度 高度 位置  比喻着驱赶-->
+		<div id="music"><!--id="自定义名称(类似于函数名--唯一)"-->
+			<div class="m_top"><!--class="自定义的名称" 可重复的(姓名) -->
+			</div>
+			<div class="m_info"></div>
+			<div class="m_title">
+				<form action="/s" method="get">
+					<span>歌曲/歌手名:</span>
+					<input type="text" name="name">
+					<input type="submit" value="  Go  ">
+				</form>
+			</div>
+			<div class="m_song"></div>
+			<div class="m_footer"></div>
+			<div class="btn"></div>
+		</div>
+		<textarea style="display:none" id="text">
+			[00:00.60]相伴潭州——潭州教育校歌（作词/编曲/演唱：潭州教育）
+			[00:01.55]歌词制作 
+			[00:02.25]古潭州   源流长     书院镇潇湘
+			[00:07.26]到如今    薪火旺    再铸新辉煌
+			[00:12.86]跨深壑    品类广    传道授业忙
+			[00:17.96]攀险峰    传奇唱     续书新篇章
+			[00:23.37]风雨同舟  江湖共闯  劈破万里浪
+			[00:28.50]相伴有你   日月光芒  将前途照亮
+			[00:33.97]夙兴夜寐   心念联网   只为学员想
+			[00:39.32]相伴有你   携手图强   奋斗在路上
+			[00:46.53]筑平台   伟业昌   悲欢众担当
+			[00:56.42]虹之玉   各一方   甘苦齐分尝
+			[01:06.30]风雨同舟   江湖共闯   劈破万里浪
+			[01:12.43]相伴有你   日月光芒   将前途照亮
+			[01:18.00]夙兴夜寐   心念联网   只为学员想
+			[01:23.23]相伴有你   携手图强   奋斗在路上
+			[01:28.66]相伴有你   携手图强   奋斗在路上
+			[01:36.67]
+		</textarea>
+		<audio src="static/music/10.mp3" id="myMusic"></audio>
+		<script>
+			//找到点击按钮绑定点击事件
+			//document get Elements By ClassName 在document文档下面通过ClassName来获取到元素
+			var btn = document.getElementsByClassName("btn")[0];
+			//找到音乐标签
+			var music = document.getElementById("myMusic");
+			var txt = document.getElementById("text");
+			var m_song = document.getElementsByClassName("m_song")[0];
+			var mark = true;//做一个标记来保存音乐播放的状态
+			//绑定一个点击事件 点击播放音乐
+			btn.onclick = function(){//点击实现播放功能
+				if (mark)//若果mark为true
+				{
+					music.play();//播放
+					mark = false;
+				}else{
+					music.pause();//暂停
+					mark = true;
+				}
+			}
+			//console.log(txt.value);//控制台输出
+			var lrc = txt.value;//获取歌词
+			var lrcArr = lrc.split("[");//去除里面的[
+			//console.log(lrcArr);
+			var html = '';//保存歌词
+			for (var i=0;i<lrcArr.length ; i++)
+			{
+				var arr = lrcArr[i].split("]");//去除]
+				//console.log(arr[1]);//获取数组里面的值
+				//console.log(arr[0]);
+				var times = arr[0].split(".");
+				var time = times[0].split(":");
+				//把时间转换为秒钟
+				var ms = time[0]*60 + time[1]*1;
+				//console.log(ms);
+				if (arr[1])
+				{
+					html += "<p id="+ms+">"+arr[1]+"</p>";//用一个变量来保存所有的歌词
+				}
+				m_song.innerHTML = html;//在歌词盒子里面显示
+			}
+			//歌词同步
+			var oP = document.getElementsByTagName("p");
+			music.addEventListener("timeupdate",function(){
+				var cuTime = parseInt(this.currentTime);//获取当前的播放时间
+				//console.log(cuTime);
+				if (document.getElementById(cuTime))//若果存在的话就让他变色
+				{
+					//先把所有的p都改为白色然后再把当前播放的这一句变为红色
+					for (var i = 0 ;i<oP.length ;i++ )
+					{
+						oP[i].style.color = "#fff";
+					}
+					document.getElementById(cuTime).style.color = "#f00";
+				}
+			});
+		</script>
+	</body>
+</html>
