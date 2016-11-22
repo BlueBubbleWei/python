@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>欢迎光临</title>
+</head>
+<body>
+<p>The current user is:
+    {{request.user}}
+    {% if request.user.is_authenticated %}
+        {{ request.user.username }}，您好！
+        {% else %}
+            请登陆，这里放登陆链接
+            {% endif %}
+</p>
+<p> the current url is :
+<a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址加参数 delete</a>
+</p>
+    {{string}}
+    <h1>Thank you for coming!</h1>
+    {% url 'add' 4 5 %}
+    {% url 'some-url-name' arg arg2 as the_url %}
+    <p>
+    <a href="{{ the_url }}">链接到：{{ the_url }}</a>
+    </p>
+    <p style="color:green;">
+{{value}}                        
+
+                     
+     </p>
+    <p style="color:red;">content list</p>
+<!--     {% for i in TutorialList %}
+    {{ i }}
+    {% endfor %}
+--> 
+<!--
+    <p>this type is dict</p>
+    {% for i in info_dict %}
+    {{ i }}
+    <br/>
+    {% endfor %}
+
+    {{ info_dict.name }} content {{ info_dict.age }}
+    <p>show content by for</p>
+    {% for key,value in info_dict.items %}
+    {{key}}:{{value}}
+    {%endfor%}
+-->
+    {% for item in List  %}
+    {{item}}
+    {% if not forloop.last %},{% endif %}
+    {% endfor  %}
+
+</body>
+</html>
