@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My first page.</title>
+</head>
+<body>
+	<p>请输入两个数字</p>
+	<form action="/add/" method="get">
+	    a: <input type="text" id="a" name="a"> <br>
+	    b: <input type="text" id="b" name="b"> <br>
+	    <p>result: <span id='result'></span></p>
+	    <button type="button" id='sum'>提交</button>
+	</form>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<form action="/show/" method="post">
+		{% csrf_token %}
+		username:<input type="text" id='uname'><br>
+		password:<input type="password" name="" id="pass"><br>
+		confirm:<input type="password" name="" id="repass"><br>
+		<button type="button" id="submit"> REGISTER</button>
+	</form>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->	 
+	<script src="../static/jquery-1.11.3.js"></script>
+	<!-- <script src="../static/scrf.js"></script> -->
+	<script>
+	    $(document).ready(function(){
+	    	$.ajaxSetup({
+				data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+			});
+	        $("#sum").click(function(){
+		        var a = $("#a").val();
+		        var b = $("#b").val();		 
+		        $.get("/add/",{'a':a,'b':b}, function(ret){
+		            alert(ret)
+		        })
+	     	});
+	      //POST 请求需要正确认证才能得到正确的返回结果。一般在POST表单中加入 {% csrf_token %}
+//------------------
+			$('#submit').click(function(){
+				var name=$('#uname').val();				
+				var pwd=$('#pass').val();
+				var rpwd=$('#repass').val();
+				if(name.length==0){
+					alert("username can't be null!");
+					return;
+				}else if(pwd.length==0 || pwd!=rpwd){
+					alert("password can't be null!");
+					return;
+				}else{
+					var info={'uname':name,'upass':pwd}
+					$.post("/show/",info,function(ans){
+						//Something is wrong,it shouldn't switch into another page.
+						alert(ans)
+					})	
+				}
+			});
+			
+//------------------
+	    });
+	</script>
+	
+</body>
+</html>
