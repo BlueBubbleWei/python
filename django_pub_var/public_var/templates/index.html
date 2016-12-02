@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My First Page.</title>
+</head>
+<body>
+	<h1>
+		USERNAME:{{request.user.username}}
+	</h1>
+	<p>
+		{{info}}
+	</p>	
+	<p>
+		<p>Blog Home Page</p>
+ 
+DEBUG: {{ settings.DEBUG }}
+ 
+ip: {{ ip_address }}
+	</p>
+</body>
+<script>
+	window.onload=function(){
+		alert({{info}})
+	}
+	
+</script>
+</html>
