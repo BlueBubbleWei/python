@@ -1,0 +1,14 @@
+name: wechat
+version: 1
+
+libraries:
+- name: webpy 
+  version: "0.36"
+
+- name: lxml 
+  version: "2.3.4"
+
+- name: requests
+  version: "2.10.0"
+
+
