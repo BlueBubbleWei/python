@@ -1,0 +1,7 @@
+<uwsgi>
+  <socket>127.0.0.1:8099</socket>
+  <chdir>/home/bluebubble/文档/python/minicms</chdir>
+  <module>minicms.wsgi</module>
+  <processes>1</processes>
+  <daemonize>uwsgi.log</daemonize>
+</uwsgi>

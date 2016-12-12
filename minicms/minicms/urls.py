@@ -17,10 +17,17 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from DjangoUeditor import urls as DjangoUeditor_urls
 from django.conf import settings
+from news import views as news_views
+# from hitcount import urls as hitcount_urls
 
 urlpatterns = [
+	url(r'^$',news_views.index,name='index'),
+	url(r'^column/(?P<column_slug>[^/]+)/$',news_views.column_detail,name='column'),
+	url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$',news_views.article_detail,name='article'),
+	# url(r'^news/(?P<article_slug>[^/]+)/$',news_views.article_detail,name='article'),
     url(r'^admin/', admin.site.urls),
     url(r'^ueditor/',include(DjangoUeditor_urls)),
+    # url(r'hitcount',include(hitcount_urls)),
 
 ]
 

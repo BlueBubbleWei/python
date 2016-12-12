@@ -1,0 +1,141 @@
+*** Starting uWSGI 2.0.14 (64bit) on [Sun Dec 11 22:27:30 2016] ***
+compiled with version: 5.4.0 20160609 on 11 December 2016 21:58:49
+os: Linux-4.4.0-53-generic #74-Ubuntu SMP Fri Dec 2 15:59:10 UTC 2016
+nodename: bluebubble-pc
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/bluebubble/文档/python/minicms
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/bluebubble/文档/python/minicms
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31403
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8099 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2506d10
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2506d10 pid: 23394 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 23394, cores: 1)
+Gracefully killing worker 1 (pid: 23394)...
+*** Starting uWSGI 2.0.14 (64bit) on [Mon Dec 12 15:25:04 2016] ***
+compiled with version: 5.4.0 20160609 on 11 December 2016 21:58:49
+os: Linux-4.4.0-53-generic #74-Ubuntu SMP Fri Dec 2 15:59:10 UTC 2016
+nodename: bluebubble-pc
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/bluebubble/文档/python/minicms
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/bluebubble/文档/python/minicms
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31403
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8099 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x222cd10
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72768 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x222cd10 pid: 3378 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 3378, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:29:14 2016] GET / => generated 3461 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 2/2] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:29:17 2016] GET / => generated 3461 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 3/3] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:32:03 2016] GET / => generated 3461 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '127.0.01:8000'. You may need to add u'127.0.01' to ALLOWED_HOSTS.
+[pid: 3378|app: 0|req: 4/4] 127.0.0.1 () {40 vars in 613 bytes} [Mon Dec 12 07:32:49 2016] GET / => generated 56193 bytes in 100 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '127.0.01:8000'. You may need to add u'127.0.01' to ALLOWED_HOSTS.
+[pid: 3378|app: 0|req: 5/5] 127.0.0.1 () {38 vars in 600 bytes} [Mon Dec 12 07:32:50 2016] GET /favicon.ico => generated 56186 bytes in 37 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 6/6] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:32:54 2016] GET / => generated 3461 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 7/7] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:50:17 2016] GET / => generated 3467 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 8/8] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:51:01 2016] GET / => generated 3468 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3378|app: 0|req: 9/9] 127.0.0.1 () {44 vars in 874 bytes} [Mon Dec 12 07:51:07 2016] GET /column/sports/ => generated 3941 bytes in 14 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 10/10] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:51:12 2016] GET / => generated 3468 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 11/11] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:53:01 2016] GET / => generated 3461 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 12/12] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:54:19 2016] GET / => generated 3461 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 13/13] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 07:54:49 2016] GET / => generated 3447 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 14/14] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:04:18 2016] GET / => generated 3447 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 15/15] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:04:34 2016] GET / => generated 3447 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 16/16] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:10:14 2016] GET / => generated 3534 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 17/17] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:10:22 2016] GET / => generated 3534 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 18/18] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:10:34 2016] GET / => generated 3534 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 19/19] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:12:21 2016] GET / => generated 3534 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 20/20] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:12:25 2016] GET / => generated 3534 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 21/21] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:12:29 2016] GET / => generated 3534 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 22/22] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:15:09 2016] GET / => generated 3534 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 23/23] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:15:14 2016] GET / => generated 3534 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 24/24] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:15:31 2016] GET / => generated 3534 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 25/25] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:16:25 2016] GET / => generated 3534 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+<QuerySet [<Column: 体育新闻>, <Column: 社会新闻>, <Column: 科技新闻>]>
+[pid: 3378|app: 0|req: 26/26] 127.0.0.1 () {42 vars in 808 bytes} [Mon Dec 12 08:31:53 2016] GET / => generated 3534 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
